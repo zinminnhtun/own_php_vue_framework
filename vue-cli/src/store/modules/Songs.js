@@ -3,23 +3,20 @@ import axios from "axios";
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 export default {
     state: {
-        data: [
-            {id: 1, name: "I love you"},
-            {id: 2, name: "I love you,baby"},
-        ],
+        songs: [],
         loading: false,
     },
     getters: {
-        name(state) {
-            // let s =state.data;
+        songNames(state) {
+            // let s =state.songs;
             // s=s.map(e=>e.name)
             // return s;
-            return state.data.map(e => e.name);
+            return state.songs.map(e => e.name);
         },
     },
     mutations: {
-        set(state, data) {
-            state.data = data;
+        set(state, songs) {
+            state.songs = songs;
         },
         setLoading(state, loading) {
             state.loading = loading;
@@ -29,7 +26,7 @@ export default {
         async get({commit}) {
             commit('setLoading', true);
             await axios
-                .get("http://localhost:8000/api/all")
+                .get("http://localhost:8000/api/songs")
                 .then(res => commit('set', res.data))
                 .catch(err => console.log(err));
             sleep(1000);

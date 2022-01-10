@@ -32,8 +32,16 @@ class Router
     }
     public function post($uri, $controller)
     {
-        $uri = explode('/',$uri);
-        $uri = $uri[0];
+        $uriArr = explode('/',$uri);
+        $arrLen = count($uriArr);
+        if (strpos($uriArr[$arrLen-1],'{') === 0){
+            $uriStr ="";
+            for ($x=0;$x<$arrLen-1;$x++) {
+                $uriStr .= "/".$uriArr[$x];
+            }
+            $uriStr = ltrim($uriStr,"/");
+            $uri = $uriStr;
+        }
         $this->routes['POST'][$uri]=$controller;
     }
     public function direct($uri, $method)

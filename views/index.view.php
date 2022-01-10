@@ -9,7 +9,7 @@
     <div class="justify-self-stretch bg-red-500 rounded-l-[2rem] flex flex-col">
         <div class="self-start flex items-center flex-col my-3 mx-6">
             <h1 class="dark:text-white self-start">Summit Your Name</h1>
-            <form action="/names" method="POST">
+            <form action="/api/post-song" method="POST">
                 <input type="text" name="name"
                        class="transform bg-gray-300 px-3 py-2 text-blue-600 focus:outline-none rounded placeholder-blue-400"
                        placeholder="Add Item" autofocus>

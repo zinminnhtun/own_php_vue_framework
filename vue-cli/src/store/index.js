@@ -1,5 +1,5 @@
 import {createLogger, createStore} from 'vuex'
-import User from './modules/User'
+import Songs from './modules/Songs'
 export default createStore({
     namespaced:true,
     plugins:[createLogger],
@@ -9,6 +9,6 @@ export default createStore({
     mutations: {},
     actions: {},
     modules: {
-        User
+        Songs
     }
 });

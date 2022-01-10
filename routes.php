@@ -6,8 +6,6 @@ use controllers\ApiController;
 use controllers\FileController;
 use music\MusicApiController;
 
-$router->get("api/users",[MusicApiController::class,"users"]);
-
 $router->get("", [PagesController::class,"index"]);
 
 $router->get("home", [PagesController::class,"home"]);
@@ -31,7 +29,13 @@ $router->post("update/{id}",[PagesController::class,"updateUser"]);
 $router->get("api/all",[ApiController::class,"all"]);
 
 //MUSIC
+$router->get("api/users",[MusicApiController::class,"users"]);
 $router->get("api/user/{id}",[MusicApiController::class,"user"]);
+
+$router->post("api/post-song",[MusicApiController::class,"postSong"]);
+$router->get("api/songs",[MusicApiController::class,"songs"]);
+$router->get("api/song/{id}",[MusicApiController::class,"song"]);
+
 
 
 
