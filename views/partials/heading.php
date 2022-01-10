@@ -9,6 +9,6 @@
     <link rel="stylesheet" href="../../resources/output.css">
 </head>
 <body class="dark:bg-gray-800 bg-blue-300/20">
-    <div id="app" class="container mx-auto min-h-screen">
+    <div id="app" class="xs:container mx-auto min-h-screen">
     <?php require "views/components/Navbar.php"; ?>
 

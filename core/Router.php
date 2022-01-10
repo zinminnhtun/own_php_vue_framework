@@ -17,46 +17,69 @@ class Router
     }
     public function get($uri, $controller)
     {
-        $uri = explode('/',$uri);
-        $uri = $uri[0];
+        $uriArr = explode('/',$uri);
+        $arrLen = count($uriArr);
+        if (strpos($uriArr[$arrLen-1],'{') === 0){
+            $uriStr ="";
+            for ($x=0;$x<$arrLen-1;$x++) {
+                $uriStr .= "/".$uriArr[$x];
+            }
+            $uriStr = ltrim($uriStr,"/");
+            $uri = $uriStr;
+        }
+
         $this->routes['GET'][$uri]=$controller;
     }
     public function post($uri, $controller)
     {
-        $uri = explode('/',$uri);
-        $uri = $uri[0];
+        $uriArr = explode('/',$uri);
+        $arrLen = count($uriArr);
+        if (strpos($uriArr[$arrLen-1],'{') === 0){
+            $uriStr ="";
+            for ($x=0;$x<$arrLen-1;$x++) {
+                $uriStr .= "/".$uriArr[$x];
+            }
+            $uriStr = ltrim($uriStr,"/");
+            $uri = $uriStr;
+        }
         $this->routes['POST'][$uri]=$controller;
     }
     public function direct($uri, $method)
     {
-        $uri = explode('/',$uri);
-        if(count($uri)>1){
-            $uri1 = intval($uri[1]);
 
-        }else{
-            $uri1 = null;
+        $uriArr = explode('/',$uri);
+        $arrLen = count($uriArr);
+        $uriNum = intval($uriArr[$arrLen-1]);
+        $uriNum > 0 ? $uriNum=$uriNum : $uriNum=null;
+        if (is_int($uriNum)){
+            $uriStr ="";
+            for ($x=0;$x<$arrLen-1;$x++) {
+                $uriStr .= "/".$uriArr[$x];
+            }
+            $uriStr = ltrim($uriStr,"/");
+            $uri = $uriStr;
         }
-        $uri = $uri[0];
+//        dd($uri);
+//        dd($uriNum);
         if (!array_key_exists($uri, $this->routes[$method])) { //contact
 
            die("404 page");
         }
         $explosion = $this->routes[$method][$uri];
-        $this->callMethod($explosion[0], $explosion[1],$uri1);
+        $this->callMethod($explosion[0], $explosion[1],$uriNum);
         // return $this->routes[$method][$uri];
        // controllers/ContactController.php
        
         // dd($this->routes[$method][$uri]);
     }
-    public function callMethod($class, $method,$uri1)
+    public function callMethod($class, $method,$uriNum)
     {
-       if($uri1===null){
+       if($uriNum===null){
            $class = new $class();
            $class->$method();
        }else{
            $class = new $class();
-           $class->$method($uri1);
+           $class->$method($uriNum);
        }
-
     }
 }

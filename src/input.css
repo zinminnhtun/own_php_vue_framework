@@ -23,6 +23,8 @@
         placeholder-transparent
         focus:outline-none
         focus:border-rose-600
+        /*for not apply default form input*/
+        border-t-0 border-l-0 border-r-0 focus:ring-0 px-0
     }
     .float-label{
         @apply absolute

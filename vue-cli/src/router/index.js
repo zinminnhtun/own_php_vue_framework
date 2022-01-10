@@ -1,23 +1,42 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from "../views/Home.vue";
+import MusicLab from "../views/MusicLab.vue";
+import Recent from "../views/Recent.vue";
+import Favourite from "../views/Favourite.vue";
+import Playlist from "../views/Playlist.vue";
 import About from "../views/About.vue";
 import Post from "../views/Post.vue";
 import AddUser from "../views/AddUser.vue";
-import FileUpload from "../views/FileUpload.vue";
+import FileUpload from "../views/FileUpload.vue"
+import Dashboard from  "../views/Dashboard.vue";
 
 const routes = [
     {
         path: "/",
-        name: "Home",
-        component: Home,
+        name: "Music Lab",
+        component: MusicLab,
     },
     {
-        path: "/about",
-        name: "About",
-        component: About,
+        path: "/recent",
+        name: "Recent",
+        component: Recent,
     },
     {
-        path: "/post",
+        path: "/favourites",
+        name: "Favourite",
+        component: Favourite,
+    },
+    {
+        path: "/playlists",
+        name: "Playlist",
+        component: Playlist,
+    },
+    {
+        path: "/dashboard",
+        name: "Dashboard",
+        component: Dashboard,
+    },
+    {
+        path: "/dashboard/post",
         name: "Post",
         component: Post,
     },
@@ -30,6 +49,11 @@ const routes = [
         path: "/file-upload",
         name: "FileUpload",
         component: FileUpload,
+    },
+    {
+        path: "/about",
+        name: "About",
+        component: About,
     },
 ];
 

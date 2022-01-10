@@ -1,12 +1,12 @@
 
 
 <script setup>
-import Home from "../components/Home.vue"
+import MusicLab from "../components/MusicLab.vue"
 
 </script>
 
 <template>
-  <Home></Home>
+  <MusicLab></MusicLab>
 </template>
 
 <style scoped>

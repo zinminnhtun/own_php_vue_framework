@@ -64,11 +64,11 @@ class PagesController
 
     public function updateUser($id)
     {
-        $update = $_POST;
         App::get("database")->update([
             "name"=> request('name'),
             "email"=>request('email'),
             "role"=>request('role'),
         ], "users",$id);
+        redirect(url().'/home');
     }
 }
