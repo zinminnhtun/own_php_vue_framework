@@ -1,11 +1,9 @@
 <template>
-  <h1 class="text-center">Post</h1>
+  <Post></Post>
 </template>
 
-<script>
-export default {
-  name: "Post"
-}
+<script setup>
+  import Post from "../components/Post.vue";
 </script>
 
 <style scoped>

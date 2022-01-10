@@ -11,8 +11,8 @@
           <div class="mt-2 flex justify-between items-center px-3">
             <router-link class="font-bold dark:text-gray-100" to="/">Music Lab</router-link>
             <div class="flex gap-12 justify-between items-center">
-              <div class="text-white ring-1 bg-sky-900 rounded-full px-2 text-[12px]">
-                <router-link to="/dashboard">DB</router-link>
+              <div class="hover:transform hover:-translate-x-[.1rem] transition-all duration-100 text-white ring-1 bg-sky-900 rounded-full px-2 text-[12px]">
+                <router-link to="/dashboard"><span class="hover:text-amber-500">DB</span></router-link>
               </div>
               <div class="dark:text-gray-100 font-bold btn-sm-blue" @click="darkLight">
                 <span v-if="!dark">dark</span>
