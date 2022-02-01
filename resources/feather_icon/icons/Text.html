@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Ubuntu:wght@300&family=Yusei+Magic&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        body{
+            padding : 50px;
+        }
+        .heading{
+            color: blue;
+        }
+        .paragraph{
+            color: #333333;
+            column-count: 3;
+            column-width: 300px;
+            column-rule: 1px solid blue;
+            column-gap: 50px;
+           
+        }
+        .paragraph p{
+            margin-bottom: 30px;
+            text-align: justify;
+            line-height: 2;
+
+        }
+        .full{
+            column-span: all;
+            margin-top: 30px;
+        }
+        @media screen and (max-width: 480px) {
+           body{
+               padding: 25px; 
+           } 
+           .heading{
+            margin-bottom: 30px;
+        }
+           .full{
+               margin-top: 0px;
+           }
+        }
+    </style>
+</head>
+<body>
+   <h1 class="heading">CSS3 Column Properties</h1>
+   <div class="paragraph">
+       <p class="full">
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, vero porro eum fugit sequi et ratione unde quibusdam id natus minima maxime, explicabo dicta vel suscipit labore quia atque dolor.
+       </p>
+       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In quia, esse quod consequatur odit quisquam ratione aspernatur et hic nesciunt voluptates pariatur asperiores beatae illum, soluta molestias voluptatem quo voluptatibus.
+       </p>
+       <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque distinctio suscipit, et facere fuga dolorem officiis voluptatem deleniti itaque. Illo laboriosam officiis voluptatem error! Velit recusandae fugiat nam quaerat!
+       </p>
+       <p>
+           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt ab facere mollitia eveniet a enim, recusandae tenetur esse repellendus illum dicta facilis, aut quibusdam exercitationem dolore aliquid repudiandae neque atque!
+       </p>
+       <p class="full">
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci doloremque obcaecati harum, autem nesciunt recusandae impedit quo soluta enim, beatae, doloribus reiciendis quas accusamus ullam vitae explicabo cupiditate esse ut!
+       </p>
+       <p>
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illo temporibus enim sunt eum cumque earum repellendus, deserunt rerum doloribus dignissimos qui perferendis magnam! Dolore, eligendi? Officia velit ad quibusdam!
+       </p>
+       <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ipsam inventore, excepturi porro perspiciatis voluptatem harum optio dicta velit. Adipisci dolorem nostrum nam consectetur reiciendis eaque perferendis id quis modi.
+       </p>
+       <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad officiis, sequi, ullam nisi mollitia beatae tempora sapiente explicabo optio fugit distinctio, cupiditate doloremque deserunt culpa nobis neque voluptatum incidunt ratione!
+       </p>
+   </div>
+</body>
+</html>

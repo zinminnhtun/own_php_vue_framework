@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.filter-green{
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+
+@layer components {
+    .menu-item{
+        @apply gap-0 grow text-center hover:text-white text-[28px] text-black border-b-[3px] border-l-[3px] border-r-[3px] hover:border-b-gray-900 hover:border-l-[#898F9BFF] hover:border-r-[#898F9BFF] border-b-gray-300 border-r-gray-300 border-l-gray-300 hover:bg-gray-500/70;
+    }
+}
