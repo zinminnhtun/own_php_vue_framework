@@ -1,9 +1,15 @@
 <?php
 
-function url(){
+function url($path=""){
 //    $dir = "/Codes/my_php_framework";
-    $dir = "";
-    return "http://{$_SERVER["HTTP_HOST"]}{$dir}";
+
+    return "http://{$_SERVER["HTTP_HOST"]}$path";
+}
+
+function _public($path=""){
+//    $dir = "/Codes/my_php_framework";
+
+    return "http://{$_SERVER["HTTP_HOST"]}/public/$path";
 }
 
 function asset($path){
