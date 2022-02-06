@@ -6,9 +6,9 @@
     <link rel="icon" href="<?= _public("favicon.ico");?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-      <script type="module" crossorigin src="<?= _public("/assets/index.0489a5ec.js");?>"></script>
-      <link rel="modulepreload" href="<?= _public("/assets/vendor.5feaa27f.js");?>">
-    <link rel="stylesheet" href="<?= _public("/assets/index.c61860d3.css");?>">
+      <script type="module" crossorigin src="<?= _public("/assets/index.eb0641dd.js");?>"></script>
+      <link rel="modulepreload" href="<?= _public("/assets/vendor.219ab425.js");?>">
+    <link rel="stylesheet" href="<?= _public("/assets/index.1a61736a.css");?>">
   </head>
   <body>
     <div id="app"></div>
