@@ -48,6 +48,15 @@ class  QueryBuilder
     public function update($dataArr,$table,$id)
     {
         $getDataKeys = array_keys($dataArr);
-        dd($getDataKeys);
+        $arr = [];
+        foreach ($getDataKeys as $key => $value) {
+            array_push($arr,$value."=:".$value);
+//            name=:name, surname=:surname, sex=:sex
+        }
+        $namedPlaceholder = implode(',',$arr);
+        $sql = "update $table set $namedPlaceholder where id=:id";
+        $statement = ($this->pdo)->prepare($sql);
+        $arrMerge = array_merge($dataArr,['id'=>$id]);
+        $statement->execute($arrMerge);
     }
 }
