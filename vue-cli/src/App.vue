@@ -4,20 +4,22 @@
 // import HelloWorld from './components/HelloWorld.vue'
 </script>
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+    <div class="bg-gradient-to-br from-sky-200 to-emerald-300">
+      <div class="container mx-auto min-h-screen">
+        <div class="text-center">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/post">Post</router-link> |
+          <router-link to="/add-user">Add User</router-link> |
+          <router-link to="/file-upload">File Upload</router-link> |
+          <router-link to="/about">About</router-link>
+        </div>
+        <router-view/>
+      </div>
+    </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app{
+
 }
 </style>

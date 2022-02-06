@@ -1,7 +1,7 @@
 
 <div class="flex justify-between items-center gap-2 w-[96%] mx-auto">
     <nav class="grow-[96] flex justify-around items-center flex-no-wrap mb-3 mt-2 bg-gray-300 text-white shadow-lg rounded border-b-[1px] border-b-gray-900">
-        <a @click="navFocus(1)" :class="['menu-item',{'border-b-gray-900 bg-gray-500/70 border-l-[#898F9BFF] border-r-[#898F9BFF] text-white':nav_focus1}]" href="/">
+        <a @click="navFocus(1)" :class="['menu-item',{'border-b-gray-900 bg-gray-500/70 border-l-[#898F9BFF] border-r-[#898F9BFF] text-white':nav_focus1}]" href="/home">
             <i class="feather-home"></i>
         </a>
         <a @click="navFocus(2)" :class="['menu-item',{'border-b-gray-900 bg-gray-500/70 border-l-[#898F9BFF] border-r-[#898F9BFF] text-white':nav_focus2}]" href="/about">

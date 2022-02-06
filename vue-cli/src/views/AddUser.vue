@@ -1,11 +1,10 @@
 <template>
-  <h1 class="text-center">About Page</h1>
+  <h1 class="text-center">Add User</h1>
 </template>
-
 
 <script>
 export default {
-  name: "About"
+  name: "AddPost"
 }
 </script>
 

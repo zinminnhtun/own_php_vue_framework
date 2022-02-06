@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .file-input {
+        @apply file:bg-gradient-to-br file:from-blue-500 file:to-blue-600
+        file:px-3 file:py-1 file:mx-2 file:my-2
+        file:border-none
+        file:rounded-full
+        file:text-white
+        file:text-sm
+        file:cursor-pointer
+        file:shadow-lg file:shadow-blue-600/50
+
+        bg-gradient-to-br from-gray-600 to-gray-700
+        text-white/80
+        rounded-full
+        cursor-pointer
+        file:text-sm
+        shadow-xl shadow-gray-700/60
+    }
+    .btn-blue{
+        @apply px-3 py-2 bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-gradient-to-br hover:from-blue-500 hover:to-blue-600 rounded-full shadow-lg shadow-blue-700 text-white
+    }
+}

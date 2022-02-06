@@ -1,6 +1,4 @@
-
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,13 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../resources/feather_icon/feather.css">
     <link rel="stylesheet" href="../../resources/output.css">
-    <script src="../../resources/js/axios/axios.min.js"></script>
-    <script src="../../resources/js/vue/vue.js"></script>
-    <script src="../../resources/js/vue/vue-router.js"></script>
-
-
 </head>
-
 <body class="dark:bg-gray-800 bg-blue-300/20">
     <div id="app" class="container mx-auto min-h-screen">
     <?php require "views/components/Navbar.php"; ?>

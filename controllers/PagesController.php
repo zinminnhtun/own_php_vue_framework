@@ -40,7 +40,35 @@ class PagesController
     {
         App::get("database")->insert([
             "name"=> request('name'),
+            "email"=>"zinmin@gmail.com",
+            "password"=>"",
+            "playlist"=>"",
         ], "users");
         redirect('home');
+    }
+
+    public function deleteUser($id)
+    {
+        App::get("database")->delete("users",$id);
+        redirect(url().'/home');
+    }
+
+    public function editUser($id)
+    {
+        $user = App::get('database')->selectOne('users','id',$id);
+       view("edit",[
+           "id"=>$id,
+           "user"=>$user
+       ]);
+    }
+
+    public function updateUser($id)
+    {
+        $update = $_POST;
+        App::get("database")->update([
+            "name"=> request('name'),
+            "email"=>request('email'),
+            "role"=>request('role'),
+        ], "users",$id);
     }
 }
