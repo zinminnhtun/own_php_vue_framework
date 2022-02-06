@@ -2,7 +2,7 @@
   <div class="mx-auto mt-12 flex justify-center items-center">
     <form @submit.prevent="onUpload" action="/save" method="post" enctype="multipart/form-data" class="h-screen mx-auto">
       <input @change="onChange" type="file" name="file" accept="*/*" class="file-input" multiple/>
-      <button type="submit" class="btn-blue">Upload</button>
+      <button type="submit" class="btn-blue ml-3">Upload</button>
     </form>
     <!--    <form @submit.prevent="onUpload" action="/save" method="post" enctype="multipart/form-data">-->
     <!--      <input @change="onChange" type="file" name="file" accept="*/*" class="bg-blue-500" multiple>-->

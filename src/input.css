@@ -10,4 +10,30 @@
     .menu-item{
         @apply gap-0 grow text-center hover:text-white text-[28px] text-black border-b-[3px] border-l-[3px] border-r-[3px] hover:border-b-gray-900 hover:border-l-[#898F9BFF] hover:border-r-[#898F9BFF] border-b-gray-300 border-r-gray-300 border-l-gray-300 hover:bg-gray-500/70;
     }
+
+    .btn-blue{
+        @apply px-3 py-2 bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-gradient-to-br hover:from-blue-500 hover:to-blue-600 rounded-full shadow-lg shadow-blue-700 text-white
+    }
+    .btn-red{
+        @apply px-3 py-2 bg-gradient-to-br from-rose-400 to-rose-600 hover:bg-gradient-to-br hover:from-rose-500 hover:to-rose-600 rounded-full shadow-lg shadow-rose-700 text-white
+    }
+
+    .peer-input{
+        @apply h-10 w-full border-b-2 border-gray-300
+        placeholder-transparent
+        focus:outline-none
+        focus:border-rose-600
+    }
+    .float-label{
+        @apply absolute
+        left-0
+        -top-3.5
+        text-gray-600 text-sm
+        transition-all
+        peer-placeholder-shown:text-gray-400
+        peer-placeholder-shown:top-2
+        peer-focus:-top-3.5
+        peer-focus:text-gray-600
+        peer-focus:text-sm
+    }
 }

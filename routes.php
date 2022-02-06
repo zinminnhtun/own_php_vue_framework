@@ -17,7 +17,7 @@ use controllers\FileController;
 
 
 // For temporary
-$router->get("Codes/my_php_framework", [PagesController::class,"index"]);
+//$router->get("delete/{id}", [PagesController::class,"index"]);
 
 $router->get("", [PagesController::class,"index"]);
 
@@ -30,14 +30,21 @@ $router->get("customers", [PagesController::class,"customer"]);
 
 
 $router->get("users", [UsersController::class,"index"]);
-$router->post("names", [PagesController::class,"createUsers"]);
+
 
 //files Save
 $router->post("save",[FileController::class,"file"]);
-//For Temporary
-$router->post("Codes/my_php_framework/save",[FileController::class,"file"]);
 
-//apiJson
+// CRUD
+$router->post("names", [PagesController::class,"createUsers"]);
+$router->get("delete/{id}",[PagesController::class,"deleteUser"]);
+$router->get("edit/{id}",[PagesController::class,"editUser"]);
+$router->post("update/{id}",[PagesController::class,"updateUser"]);
+
+
+
+
+//api
 $router->get("api/all",[ApiController::class,"all"]);
 
 
