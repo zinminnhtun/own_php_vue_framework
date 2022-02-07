@@ -3,14 +3,14 @@ module.exports = {
   darkMode: 'class',
   content: ["./views/**/*.{php,js}"],
   theme: {
-    // screens:{
-    //   '2xs': '384px',
-    //   'xs': '512px',
-    //   ...defaultTheme.screens,
-    // },
+    screens:{
+      '2xs': '384px',
+      'xs': '512px',
+      ...defaultTheme.screens,
+    },
     extend: {
 
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }

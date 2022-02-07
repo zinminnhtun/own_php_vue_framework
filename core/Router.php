@@ -57,6 +57,5 @@ class Router
            $class = new $class();
            $class->$method($uri1);
        }
-
     }
 }

@@ -1,21 +1,39 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-// import HelloWorld from './components/HelloWorld.vue'
+  import {ref,computed} from "vue"
+  const dark = ref(false);
+  const darkLight = ()=> dark.value = !dark.value;
 </script>
 <template>
-    <div class="bg-gradient-to-br from-sky-200 to-emerald-300">
+  <div :class="{'dark':dark}">
+    <div class="bg-gradient-to-br from-sky-200 to-emerald-300 dark:bg-gradient-to-br dark:from-gray-700 dark:to-gray-500">
       <div class="container mx-auto min-h-screen">
-        <div class="text-center">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/post">Post</router-link> |
-          <router-link to="/add-user">Add User</router-link> |
-          <router-link to="/file-upload">File Upload</router-link> |
-          <router-link to="/about">About</router-link>
+        <div class="grid grid-cols-1 gap-3">
+          <div class="mt-2 flex justify-between items-center px-3">
+            <router-link class="font-bold dark:text-gray-100" to="/">Music Lab</router-link>
+            <div class="flex gap-12 justify-between items-center">
+              <div class="text-white ring-1 bg-sky-900 rounded-full px-2 text-[12px]">
+                <router-link to="/dashboard">DB</router-link>
+              </div>
+              <div class="dark:text-gray-100 font-bold btn-sm-blue" @click="darkLight">
+                <span v-if="!dark">dark</span>
+                <span v-else>light</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full h-[0.08rem] my-0 dark:bg-sky-500 bg-gray-600 rounded shadow-lg shadow-sky-700"></div>
+
+          <div class="flex justify-around items-center">
+            <router-link class="font-bold dark:text-gray-100" to="/recent">Recent</router-link>
+            <router-link class="font-bold dark:text-gray-100" to="/favourites">Favourites</router-link>
+            <router-link class="font-bold dark:text-gray-100" to="/playlists">PlayLists</router-link>
+          </div>
         </div>
         <router-view/>
       </div>
     </div>
+
+  </div>
 </template>
 
 <style>
