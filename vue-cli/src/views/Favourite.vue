@@ -1,13 +1,9 @@
-<template>
-
-</template>
+<template></template>
 
 <script>
 export default {
-  name: "Favourite.vue"
-}
+  name: "Favourite.vue",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

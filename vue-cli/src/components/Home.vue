@@ -22,35 +22,49 @@
 //   // const result = fetch('/api.json')
 //   // store.dispatch("getData", result);
 // })
-
 </script>
 <template>
-  <div class="container bg-rose-500
-   p-16 mx-auto my-2
-   grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <form class="p-2 bg-fuchsia-400 flex-col ">
+  <div
+    class="container mx-auto my-2 grid grid-cols-1 gap-4 bg-rose-500 p-16 sm:grid-cols-2"
+  >
+    <form class="flex-col bg-fuchsia-400 p-2">
       <label for="file" class="block">File Upload</label>
       <div class="flex justify-center">
-        <input id="file" type="file" class="w-[75%] focus:ring-amber-400 mr-2 px-3 py-2 outline-none ring">
-        <button type="submit" class="bg-teal-300 p-2 text-pink-400 hover:bg-teal-400">Upload</button>
+        <input
+          id="file"
+          type="file"
+          class="mr-2 w-[75%] px-3 py-2 outline-none ring focus:ring-amber-400"
+        />
+        <button
+          type="submit"
+          class="bg-teal-300 p-2 text-pink-400 hover:bg-teal-400"
+        >
+          Upload
+        </button>
       </div>
     </form>
-    <div class="p-2 bg-fuchsia-400">
+    <div class="container m-2 bg-fuchsia-400 p-2">
       <p></p>
       <label></label>
       <div class="flex justify-center">
-        <input v-model="name" type="text" class="w-[75%] focus:ring-amber-400 mr-2 px-3 py-2 outline-none ring">
-        <button type="submit" class="bg-teal-300 p-2 text-pink-400 hover:bg-teal-400">Upload</button>
+        <input
+          v-model="name"
+          type="text"
+          class="mr-2 w-[75%] px-3 py-2 outline-none ring focus:ring-amber-400"
+        />
+        <button
+          type="submit"
+          class="bg-teal-300 p-2 text-pink-400 hover:bg-teal-400"
+        >
+          Upload
+        </button>
       </div>
     </div>
-    <div class="p-2 bg-fuchsia-400"></div>
-    <div class="p-2 bg-fuchsia-400"></div>
-    <div class="p-2 bg-fuchsia-400"></div>
-    <div class="p-2 bg-fuchsia-400"></div>
+    <div class="bg-fuchsia-400 p-2"></div>
+    <div class="bg-fuchsia-400 p-2"></div>
+    <div class="bg-fuchsia-400 p-2"></div>
+    <div class="bg-fuchsia-400 p-2"></div>
   </div>
 </template>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,16 +1,14 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
-  darkMode: 'class',
-  content: ["./views/**/*.{php,js}"],
+  darkMode: "class",
+  content: ["./views/**/*.{view.php,php,js}"],
   theme: {
-    screens:{
-      '2xs': '384px',
-      'xs': '512px',
+    screens: {
+      "2xs": "384px",
+      xs: "512px",
       ...defaultTheme.screens,
     },
-    extend: {
-
-    },
+    extend: {},
   },
-  plugins: [require('@tailwindcss/forms')],
-}
+  plugins: [require("@tailwindcss/forms")],
+};

@@ -2,13 +2,10 @@
   <h1 class="text-center">About Page</h1>
 </template>
 
-
 <script>
 export default {
-  name: "About"
-}
+  name: "About",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

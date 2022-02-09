@@ -3,56 +3,55 @@
 @tailwind utilities;
 
 @layer components {
-    .file-input {
-        @apply file:bg-gradient-to-br file:from-blue-500 file:to-blue-600
-        file:px-3 file:py-1 file:mx-2 file:my-2
-        file:border-none
-        file:rounded-full
-        file:text-white
-        file:text-sm
+  .file-input {
+    @apply cursor-pointer rounded-full bg-gradient-to-br
+        from-gray-600 to-gray-700 text-white/80 shadow-xl
+        shadow-gray-700/60
+        file:mx-2
+        file:my-2
         file:cursor-pointer
-        file:shadow-lg file:shadow-blue-600/50
+        file:rounded-full
+        file:border-none file:bg-gradient-to-br
 
-        bg-gradient-to-br from-gray-600 to-gray-700
-        text-white/80
-        rounded-full
-        cursor-pointer
+        file:from-blue-500 file:to-blue-600 file:px-3
+        file:py-1
         file:text-sm
-        shadow-xl shadow-gray-700/60
-    }
+        file:text-sm
+        file:text-white
+        file:shadow-lg file:shadow-blue-600/50;
+  }
 
-    .peer-input {
-        @apply h-10 w-full border-b-2 border-gray-300
-        placeholder-transparent
-        focus:outline-none
-        focus:border-rose-600
-            /*for not apply default form input*/
-        border-t-0 border-l-0 border-r-0 focus:ring-0 px-0
-    }
+  .peer-input {
+    @apply /*for not apply default
+        form
+        input*/
+        h-10
+            w-full border-b-2 border-t-0 border-l-0 border-r-0 border-gray-300
+        px-0 placeholder-transparent focus:border-rose-600 focus:outline-none focus:ring-0;
+  }
 
-    .float-label {
-        @apply absolute
+  .float-label {
+    @apply absolute
         left-0
         -top-3.5
-        text-gray-600 text-sm
+        text-sm text-gray-600
         transition-all
-        peer-placeholder-shown:text-gray-400
         peer-placeholder-shown:top-2
+        peer-placeholder-shown:text-gray-400
         peer-focus:-top-3.5
-        peer-focus:text-gray-600
         peer-focus:text-sm
-    }
+        peer-focus:text-gray-600;
+  }
 
-    .btn-blue {
-        @apply px-3 py-2 bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-gradient-to-br hover:from-blue-500 hover:to-blue-600 rounded-full shadow-lg shadow-blue-700 text-white cursor-pointer
-    }
+  .btn-blue {
+    @apply cursor-pointer rounded-full bg-gradient-to-br from-blue-400 to-blue-600 px-3 py-2 text-white shadow-lg shadow-blue-700 hover:bg-gradient-to-br hover:from-blue-500 hover:to-blue-600;
+  }
 
-    .btn-red {
-        @apply px-3 py-2 bg-gradient-to-br from-rose-400 to-rose-600 hover:bg-gradient-to-br hover:from-rose-500 hover:to-rose-600 rounded-full shadow-lg shadow-rose-700 text-white cursor-pointer
-    }
+  .btn-red {
+    @apply cursor-pointer rounded-full bg-gradient-to-br from-rose-400 to-rose-600 px-3 py-2 text-white shadow-lg shadow-rose-700 hover:bg-gradient-to-br hover:from-rose-500 hover:to-rose-600;
+  }
 
-    .btn-sm-blue {
-        @apply text-[12px] px-2 py-0.5 bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-gradient-to-br hover:from-blue-500 hover:to-blue-700 rounded-full shadow-lg shadow-blue-700 text-white cursor-pointer
-    }
-
+  .btn-sm-blue {
+    @apply cursor-pointer rounded-full bg-gradient-to-br from-blue-400 to-blue-600 px-2 py-0.5 text-[12px] text-white shadow-lg shadow-blue-700 hover:bg-gradient-to-br hover:from-blue-500 hover:to-blue-700;
+  }
 }

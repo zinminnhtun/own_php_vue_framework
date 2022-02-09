@@ -4,10 +4,8 @@
 
 <script>
 export default {
-  name: "AddPost"
-}
+  name: "AddPost",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
