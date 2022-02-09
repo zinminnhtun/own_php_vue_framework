@@ -30,10 +30,12 @@ async function postSong() {
 
 // FILE UPLOAD
 const files = ref(null);
+
 function onChange(event) {
   files.value = event.target.files;
   console.log(files.value);
 }
+
 function fileUpload() {
   const formData = new FormData();
 
