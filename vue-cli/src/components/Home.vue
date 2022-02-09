@@ -25,19 +25,19 @@
 </script>
 <template>
   <div
-    class="container mx-auto my-2 grid grid-cols-1 gap-4 bg-rose-500 p-16 sm:grid-cols-2"
+      class="container mx-auto my-2 grid grid-cols-1 gap-4 bg-rose-500 p-16 sm:grid-cols-2"
   >
     <form class="flex-col bg-fuchsia-400 p-2">
       <label for="file" class="block">File Upload</label>
       <div class="flex justify-center">
         <input
-          id="file"
-          type="file"
-          class="mr-2 w-[75%] px-3 py-2 outline-none ring focus:ring-amber-400"
+            id="file"
+            type="file"
+            class="mr-2 w-[75%] px-3 py-2 outline-none ring focus:ring-amber-400"
         />
         <button
-          type="submit"
-          class="bg-teal-300 p-2 text-pink-400 hover:bg-teal-400"
+            type="submit"
+            class="bg-teal-300 p-2 text-pink-400 hover:bg-teal-400"
         >
           Upload
         </button>
@@ -48,13 +48,13 @@
       <label></label>
       <div class="flex justify-center">
         <input
-          v-model="name"
-          type="text"
-          class="mr-2 w-[75%] px-3 py-2 outline-none ring focus:ring-amber-400"
+            v-model="name"
+            type="text"
+            class="mr-2 w-[75%] px-3 py-2 outline-none ring focus:ring-amber-400"
         />
         <button
-          type="submit"
-          class="bg-teal-300 p-2 text-pink-400 hover:bg-teal-400"
+            type="submit"
+            class="mx-0 bg-teal-300 p-2 text-pink-400 hover:bg-teal-400"
         >
           Upload
         </button>

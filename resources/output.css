@@ -590,51 +590,6 @@ select {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 384px) {
-
-  .container {
-    max-width: 384px;
-  }
-}
-@media (min-width: 512px) {
-
-  .container {
-    max-width: 512px;
-  }
-}
-@media (min-width: 640px) {
-
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
-  }
-}
 .menu-item {
   flex-grow: 1;
   gap: 0px;
@@ -758,9 +713,6 @@ select {
 }
 .right-\[0rem\] {
   right: 0rem;
-}
-.m-2 {
-  margin: 0.5rem;
 }
 .my-3 {
   margin-top: 0.75rem;
@@ -972,9 +924,6 @@ select {
 .bg-blue-300\/20 {
   background-color: rgb(147 197 253 / 0.2);
 }
-.p-2 {
-  padding: 0.5rem;
-}
 .p-8 {
   padding: 2rem;
 }
@@ -1085,46 +1034,37 @@ select {
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
     brightness(118%) contrast(119%);
 }
-
 .hover\:bg-orange-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
-
 .hover\:bg-slate-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
-
 .hover\:bg-gray-500\/30:hover {
   background-color: rgb(107 114 128 / 0.3);
 }
-
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-
 .dark .dark\:border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
-
 .dark .dark\:bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
-
 .dark .dark\:bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
-
 .dark .dark\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-
 @media (min-width: 512px) {
 
   .xs\:container {
